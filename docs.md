@@ -13,7 +13,7 @@ We’ve included a feature called secrets that lets the owner of a pad put in AP
 Adding a secret can be done by clicking the "secrets" button in the lower right of the launchpad dashboard and enter a key and value for your secret. 
 ![launchpad access key modal](http://i.imgur.com/kKUUSuy.png)
 
-Accessing your secrets within your code can be done by exposing the secrets or headers object in context. See the [CurrentWeather](https://launchpad.graphql.com/5rrx10z19) examples for a live example.
+Accessing your secrets within your code can be done by exposing the secrets or headers object in context. See the [CurrentWeather](https://launchpad.graphql.com/5rrx10z19) example for a live example.
 ```js
 const resolvers = {
   Query: {
