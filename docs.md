@@ -10,6 +10,13 @@ Every pad on Launchpad is owned by the user that created it. The code and endpoi
 
 We’ve included a feature called secrets that lets the owner of a pad put in API keys and other sensitive information which is hidden from everyone else. So while anyone can read the code and call the endpoint, they can’t extract database passwords or API keys. TK add information about how we do this.
 
+Adding a secret can be done by clicking the "secrets" button in the lower right of the launchpad dashboard.
+[secrets-button](http://i.imgur.com/jMCXf8i.png)
+
+Enter a key and value for the secret. 
+[launchpad access key modal](http://i.imgur.com/kKUUSuy.png)
+
+
 ## Fork to edit
 
 If you’re viewing someone else’s pad, you can log in and click “Fork” to make a copy that you own. In the process, any secrets will be deleted, and you will need to provide your own values for those keys. For example, if you fork the MongoDB example, you’ll need to go to a MongoDB hosting provider like mLab, create a database, and put in the new database URL.
