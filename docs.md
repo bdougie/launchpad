@@ -10,11 +10,27 @@ Every pad on Launchpad is owned by the user that created it. The code and endpoi
 
 We’ve included a feature called secrets that lets the owner of a pad put in API keys and other sensitive information which is hidden from everyone else. So while anyone can read the code and call the endpoint, they can’t extract database passwords or API keys. TK add information about how we do this.
 
-Adding a secret can be done by clicking the "secrets" button in the lower right of the launchpad dashboard.
-![secrets-button](http://i.imgur.com/jMCXf8i.png)
-
-Enter a key and value for the secret. 
+Adding a secret can be done by clicking the "secrets" button in the lower right of the launchpad dashboard and enter a key and value for your secret. 
 ![launchpad access key modal](http://i.imgur.com/kKUUSuy.png)
+
+Accessing your secrets within your code can be done by exposing the secrets or headers object in context. See the [CurrentWeather](https://launchpad.graphql.com/5rrx10z19) examples for a live example.
+```js
+const resolvers = {
+  Query: {
+    user: (root, args, context) => {
+      return fetch(`https://api.netlify.com/api/v1/user?access_token=${context.secrets.ACCESS_TOKEN}`)
+      	.then(res => res.json()).catch(err => console.log(err));
+    },
+  },
+}
+...
+export function context(headers, secrets) {
+  return {
+    headers,
+    secrets,
+  };
+};
+```
 
 ## Fork to edit
 
