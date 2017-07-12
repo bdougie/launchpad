@@ -11,11 +11,10 @@ Every pad on Launchpad is owned by the user that created it. The code and endpoi
 We’ve included a feature called secrets that lets the owner of a pad put in API keys and other sensitive information which is hidden from everyone else. So while anyone can read the code and call the endpoint, they can’t extract database passwords or API keys. TK add information about how we do this.
 
 Adding a secret can be done by clicking the "secrets" button in the lower right of the launchpad dashboard.
-[secrets-button](http://i.imgur.com/jMCXf8i.png)
+![secrets-button](http://i.imgur.com/jMCXf8i.png)
 
 Enter a key and value for the secret. 
-[launchpad access key modal](http://i.imgur.com/kKUUSuy.png)
-
+![launchpad access key modal](http://i.imgur.com/kKUUSuy.png)
 
 ## Fork to edit
 
