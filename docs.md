@@ -19,11 +19,11 @@ const resolvers = {
   Query: {
     user: (root, args, context) => {
       return fetch(`https://api.netlify.com/api/v1/user?access_token=${context.secrets.ACCESS_TOKEN}`)
-      	.then(res => res.json()).catch(err => console.log(err));
+      	.then(res => res.json());
     },
   },
 }
-...
+
 export function context(headers, secrets) {
   return {
     headers,
